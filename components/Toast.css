@@ -1,60 +1,68 @@
-.toast{
-    position: fixed;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    font-weight: bold;
-    z-index: 9999;
+.toast {
+      position: fixed;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 9999;
 }
 
-.toast--bottom-center{
-    bottom: 20px;
+.toast__icon {
+      margin-right: 10px;
 }
 
-.toast--bottom-left{
-    bottom: 20px;
-    left: 20px;
+.toast__close {
+      margin-left: 10px;
 }
 
-.toast--bottom-right{
-    bottom: 20px;
-    right: 20px;
+.toast--bottom-center {
+      bottom: 20px;
 }
 
-.toast--top-center{
-    top: 20px;
+.toast--bottom-left {
+      bottom: 20px;
+      left: 20px;
 }
 
-.toast--top-left{
-    top: 20px;
-    left: 20px;
+.toast--bottom-right {
+      bottom: 20px;
+      right: 20px;
 }
 
-.toast--top-right{
-    top: 20px;
-    right: 20px;
+.toast--top-center {
+      top: 20px;
 }
 
-.toast--success{
-    background-color: green;
-    color: white;
+.toast--top-left {
+      top: 20px;
+      left: 20px;
 }
 
-.toast--info{
-    background-color: blue;
-    color: white;
+.toast--top-right {
+      top: 20px;
+      right: 20px;
 }
 
-.toast--warning{
-    background-color: yellow;   
-    color: black;
+.toast--success {
+      background-color: green;
+      color: white;
 }
 
-.toast--error{
-    background-color: red;
-    color: white;
-}   
+.toast--info {
+      background-color: blue;
+      color: white;
+}
+
+.toast--warning {
+      background-color: yellow;
+      color: black;
+}
+
+.toast--error {
+      background-color: red;
+      color: white;
+}
