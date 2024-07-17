@@ -1,0 +1,34 @@
+.ryBox {
+      padding: 1rem;
+      margin: 1rem;
+}
+
+.ryBox--fluid {
+      padding: 1rem;
+      margin: 1rem;
+}
+
+.ryBox--responsive {
+      padding: 1rem;
+      margin: 1rem;
+}
+
+.ryCenter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+}
+
+.ryContainer {
+      max-width: 60ch; /* Constrain width to 60 characters */
+      margin: 0 auto; /* Center the container horizontally */
+      padding: 0 1rem;
+}
+
+.ryContainer--centerContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}

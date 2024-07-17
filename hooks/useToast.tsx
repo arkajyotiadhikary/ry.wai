@@ -1,12 +1,12 @@
-import Toast, { ToastProps } from "@/components/Toast";
+import Toast, { WaiToastProps } from "@/components/WaiToast";
 import { useState } from "react";
 
 const useToast = () => {
       // setting up the current toast - so that we can close it later
-      const [toast, setToast] = useState<ToastProps | null>(null);
+      const [toast, setToast] = useState<WaiToastProps | null>(null);
 
       // function to trigger the toast with the given props
-      const triggerToast = (toast: ToastProps) => {
+      const triggerToast = (toast: WaiToastProps) => {
             setToast(toast);
             setTimeout(() => setToast(null), toast.duration || 3000);
       };

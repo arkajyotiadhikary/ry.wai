@@ -1,6 +1,6 @@
 "use client";
 /*
-    Toasts component
+    WaiToasts component
     props inputs are
     - type 
     - icons
@@ -19,11 +19,11 @@ import {
       AiOutlineCloseCircle,
       AiOutlineClose,
 } from "react-icons/ai";
-import "./Toast.css";
+import "./index.css";
+import RyBox from "@/layouts/ryBox";
 
-export interface ToastProps {
+export interface WaiToastProps {
       type: "info" | "warning" | "success" | "error";
-      icon?: JSX.Element;
       message?: string;
       position?:
             | "bottom-center"
@@ -39,10 +39,10 @@ export interface ToastProps {
 
 // Icon object
 const icons = {
-      success: <AiOutlineCheckCircle className="toast__icon" />,
-      info: <AiOutlineInfoCircle className="toast__icon" />,
-      warning: <AiOutlineWarning className="toast__icon" />,
-      error: <AiOutlineCloseCircle className="toast__icon" />,
+      success: <AiOutlineCheckCircle className="waitoast__icon" />,
+      info: <AiOutlineInfoCircle className="waitoast__icon" />,
+      warning: <AiOutlineWarning className="waitoast__icon" />,
+      error: <AiOutlineCloseCircle className="waitoast__icon" />,
 };
 
 // Default messages
@@ -60,7 +60,7 @@ const defaultBackgroundColor = {
       error: "red",
 };
 
-const Toast: React.FC<ToastProps> = ({
+const WaiToast: React.FC<WaiToastProps> = ({
       type = "info",
       message,
       backgroundColor,
@@ -68,17 +68,17 @@ const Toast: React.FC<ToastProps> = ({
       onClose = () => {},
 }) => {
       return (
-            <div
-                  className={`toast toast--${type} ${
+            <RyBox
+                  className={`waitoast waitoast--${type} ${
                         backgroundColor || defaultBackgroundColor[type]
-                  } toast--${position}`}
+                  } waitoast--${position}`}
             >
                   {icons[type]} {message || defaultMessages[type]}
-                  <button className="toast__close" onClick={onClose}>
+                  <button className="waitoast__close" onClick={onClose}>
                         <AiOutlineClose />
                   </button>
-            </div>
+            </RyBox>
       );
 };
 
-export default Toast;
+export default WaiToast;
