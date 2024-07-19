@@ -19,9 +19,16 @@ interface RyBoxProps {
       [key: string]: any;
 }
 
+const styles = {
+      ryBox: {
+            padding: "10px",
+            margin: "10px",
+      },
+};
+
 const RyBox: FC<RyBoxProps> = ({ as: Component = "div", className, children, ...props }) => {
       return (
-            <Component className={classNames("ryBox", className)} {...props}>
+            <Component styles={styles.ryBox} className={classNames("ryBox", className)} {...props}>
                   {children}
             </Component>
       );

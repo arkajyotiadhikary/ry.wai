@@ -16,8 +16,8 @@ export default function Home() {
                               size="lg"
                               onClick={() =>
                                     triggerToast({
-                                          type: "success",
-                                          position: "bottom-right",
+                                          type: "error",
+                                          position: "bottom_right",
                                           message: "Error Toast",
                                     })
                               }
